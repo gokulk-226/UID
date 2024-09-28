@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-
 const App = () => {
   const [students, setStudents] = useState([]);
   const [formData, setFormData] = useState({ studentId: '', name: '', gmail: '', phoneNum: '', age: '' });
+  const [isEdit, setIsEdit] = useState(false);
+  const [editId, setEditId] = useState(null);
 
   // Fetch students
   useEffect(() => {
@@ -21,9 +22,16 @@ const App = () => {
 
   // Add student
   const addStudent = () => {
-    axios.post('http://localhost:5000/students', formData)
-      .then(res => setStudents([...students, res.data]))
-      .catch(err => console.log(err));
+    if (isEdit) {
+      editStudent(editId);
+    } else {
+      axios.post('http://localhost:5000/students', formData)
+        .then(res => {
+          setStudents([...students, res.data]);
+          resetForm();
+        })
+        .catch(err => console.log(err));
+    }
   };
 
   // Edit student
@@ -31,8 +39,16 @@ const App = () => {
     axios.put(`http://localhost:5000/students/${id}`, formData)
       .then(res => {
         setStudents(students.map(student => student._id === id ? res.data : student));
+        resetForm();
       })
       .catch(err => console.log(err));
+  };
+
+  // Prepare form for editing
+  const handleEditClick = (student) => {
+    setFormData({ ...student });
+    setIsEdit(true);
+    setEditId(student._id);
   };
 
   // Delete student
@@ -42,28 +58,53 @@ const App = () => {
       .catch(err => console.log(err));
   };
 
+  // Reset form
+  const resetForm = () => {
+    setFormData({ studentId: '', name: '', gmail: '', phoneNum: '', age: '' });
+    setIsEdit(false);
+    setEditId(null);
+  };
+
   return (
-    <div>
+    <div className="app-container">
       <h1>Student CRUD Application</h1>
-      <form>
-        <input type="text" name="studentId" placeholder="Student ID" onChange={handleChange} />
-        <input type="text" name="name" placeholder="Name" onChange={handleChange} />
-        <input type="text" name="gmail" placeholder="Gmail" onChange={handleChange} />
-        <input type="text" name="phoneNum" placeholder="Phone Number" onChange={handleChange} />
-        <input type="number" name="age" placeholder="Age" onChange={handleChange} />
-        <button type="button" onClick={addStudent}>Add Student</button>
+      <form className="student-form">
+        <input type="text" name="studentId" placeholder="Student ID" value={formData.studentId} onChange={handleChange} />
+        <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
+        <input type="text" name="gmail" placeholder="Gmail" value={formData.gmail} onChange={handleChange} />
+        <input type="text" name="phoneNum" placeholder="Phone Number" value={formData.phoneNum} onChange={handleChange} />
+        <input type="number" name="age" placeholder="Age" value={formData.age} onChange={handleChange} />
+        <button type="button" onClick={addStudent}>{isEdit ? 'Update Student' : 'Add Student'}</button>
       </form>
 
       <h2>Students List</h2>
-      <ul>
-        {students.map(student => (
-          <li key={student._id}>
-            {student.name} - {student.gmail}
-            <button onClick={() => editStudent(student._id)}>Edit</button>
-            <button onClick={() => deleteStudent(student._id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+      <table className="student-table">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Gmail</th>
+            <th>Phone Number</th>
+            <th>Age</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {students.map(student => (
+            <tr key={student._id}>
+              <td>{student.studentId}</td>
+              <td>{student.name}</td>
+              <td>{student.gmail}</td>
+              <td>{student.phoneNum}</td>
+              <td>{student.age}</td>
+              <td>
+                <button onClick={() => handleEditClick(student)}>Edit</button>
+                <button onClick={() => deleteStudent(student._id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

@@ -10,7 +10,7 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/admin', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+  .catch(err => console.log('MongoDB connection error:', err));
 
 // Define student schema
 const studentSchema = new mongoose.Schema({
@@ -27,29 +27,46 @@ const Student = mongoose.model('Student', studentSchema);
 
 // Create student
 app.post('/students', async (req, res) => {
-  const student = new Student(req.body);
-  await student.save();
-  res.send(student);
+  try {
+    const student = new Student(req.body);
+    await student.save();
+    res.send(student);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
 // Read students
 app.get('/students', async (req, res) => {
-  const students = await Student.find();
-  res.send(students);
+  try {
+    const students = await Student.find();
+    res.send(students);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
 // Update student
 app.put('/students/:id', async (req, res) => {
-  const student = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.send(student);
+  try {
+    const student = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.send(student);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
 // Delete student
 app.delete('/students/:id', async (req, res) => {
-  await Student.findByIdAndDelete(req.params.id);
-  res.send({ message: 'Student deleted' });
+  try {
+    await Student.findByIdAndDelete(req.params.id);
+    res.send({ message: 'Student deleted' });
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
+// Start server
 app.listen(5000, () => {
   console.log('Server is running on port 5000');
 });

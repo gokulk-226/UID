@@ -1,0 +1,44 @@
+/* Counter.css */
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full page height */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px; /* Adds space between the title and the buttons */
+    font-size: 50px;     /* Optional: Adjust title font size */
+    color:black;         /* Optional: Customize title color */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0052cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+h2 {
+    font-size: 32px;      /* Adjust counter text size */
+    color:black;          /* Optional: Customize counter text color */
+}
