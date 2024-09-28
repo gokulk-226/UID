@@ -1,0 +1,49 @@
+.about {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #ff6600;
+}
+
+.about ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 0 0 400px;
+    padding-left: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

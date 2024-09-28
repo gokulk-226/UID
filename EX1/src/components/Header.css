@@ -1,0 +1,28 @@
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px; /* Added left and right padding for spacing */
+    display: flex;      /* Use flexbox for layout */
+    justify-content: space-between; /* Space between title and navigation */
+    align-items: center; /* Center items vertically */
+}
+
+.header h1 {
+    margin: 0; /* Remove any default margin from the heading */
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;  /* Display list items in a row */
+}
+
+.header nav ul li {
+    margin-left: 20px; /* Add space between each navigation link */
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
