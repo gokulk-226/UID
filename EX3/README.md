@@ -68,3 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Project Description: Calculator Application Using React's State
+The Calculator Application is a simple React-based project designed to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. This application leverages React’s state management to handle user input, display results, and manage operations dynamically.
+
+Features:
+Basic Arithmetic Operations:
+
+The calculator will support essential arithmetic functions: addition, subtraction, multiplication, and division.
+Users will be able to input numbers and choose an operation to get a result.
+State Management:
+
+The calculator's display, inputs, and results will be managed using React’s useState hook.
+The useState hook will track the current input, the previous number (if any), and the selected operation (if any).
+After each calculation, the state will update to reflect the new result or reset when the user wants to perform a new operation.
+User Input Handling:
+
+The application will have a clean UI that includes number buttons (0-9), operation buttons (+, -, *, /), and a display area.
+When users click a button, the corresponding number or operation will be added to the state and displayed on the screen.
+Clear Functionality:
+
+A Clear (C) button will allow users to reset the state, clearing the display and starting a new calculation.
+Real-time Result Display:
+
+As users perform calculations, the result will be dynamically updated on the screen without requiring any page reloads.
+After pressing the equal button (=), the application will calculate the result based on the current state and display it.
+Interactive and Responsive Design:
+
+The calculator will have an interactive UI with button hover effects and smooth transitions to enhance user experience.
+It will also be responsive, working across desktop and mobile devices.
+Error Handling:
+
+The app will include basic error handling, such as preventing division by zero and handling any invalid inputs to ensure smooth functionality.
+By using React’s state management for user input, calculations, and results display, this calculator provides an interactive, real-time arithmetic experience. The modular design ensures maintainability and scalability for future enhancements.
