@@ -91,3 +91,4 @@ The profile picture will be styled to appear circular, and the entire profile ca
 Reusable Component:
 
 Since the data is passed via props, the UserProfile component can be reused to display the profile of any user with different data, keeping the component DRY (Don't Repeat Yourself).
+![Screenshot 2024-09-06 073831](https://github.com/user-attachments/assets/5711a788-58ea-4576-859e-1d00a13bbfba)
