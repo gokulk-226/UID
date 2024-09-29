@@ -69,3 +69,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+Project Description: User Profile Component
+The User Profile component in React will display a user's personal information dynamically using props. This will allow the parent component to pass down user data (like name, profile picture, bio, etc.) to the UserProfile component, making it reusable for different users.
+
+Features:
+User Information Display:
+
+The component will display the user's profile picture, name, job title, and a short bio.
+These values will be passed as props to make the component flexible for various users.
+Props for Data Handling:
+
+The UserProfile component will accept props such as:
+name: The user's full name.
+jobTitle: The user’s profession.
+bio: A brief bio of the user.
+profilePicture: URL for the user's profile picture.
+Styling:
+
+The component will have clean and minimalistic CSS styling.
+The profile picture will be styled to appear circular, and the entire profile card will have a shadow effect for an enhanced look.
+Reusable Component:
+
+Since the data is passed via props, the UserProfile component can be reused to display the profile of any user with different data, keeping the component DRY (Don't Repeat Yourself).
