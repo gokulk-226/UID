@@ -113,3 +113,5 @@ Real-time Data Updates:
 
 Data displayed on the application will update in real-time as changes are made, without requiring a page refresh. This will be achieved using React's state management and asynchronous API calls.
 This CRUD application provides a seamless way for users to manage data efficiently. It offers flexibility in handling different types of records and ensures robust performance through real-time database communication.
+
+![Screenshot 2024-09-28 090832](https://github.com/user-attachments/assets/3f0b9eb9-582e-45ea-aecc-77131f1c468c)
