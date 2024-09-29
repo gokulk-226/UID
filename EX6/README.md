@@ -126,6 +126,7 @@ By integrating real-time weather data from a reliable API and providing an intui
 
 
 
+![Screenshot 2024-09-28 093315](https://github.com/user-attachments/assets/678d523a-274b-4a35-b154-7f72f55a212f)
 
 
 
