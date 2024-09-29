@@ -103,3 +103,5 @@ Attractive CSS:
 The application will feature clean and responsive design with simple yet engaging CSS for the buttons and counter display.
 Hover effects and transitions will be added to make the buttons more interactive.
 This simple counter application provides a user-friendly way to increment or decrement a value, with real-time updates and intuitive controls. It is an ideal starter project for practicing state management in React.
+
+![Screenshot 2024-09-28 091245](https://github.com/user-attachments/assets/9c7e3b8b-38b4-4047-b984-d5afca727502)
