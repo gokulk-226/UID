@@ -99,6 +99,8 @@ Interactive and Responsive Design:
 The calculator will have an interactive UI with button hover effects and smooth transitions to enhance user experience.
 It will also be responsive, working across desktop and mobile devices.
 Error Handling:
-
 The app will include basic error handling, such as preventing division by zero and handling any invalid inputs to ensure smooth functionality.
 By using React’s state management for user input, calculations, and results display, this calculator provides an interactive, real-time arithmetic experience. The modular design ensures maintainability and scalability for future enhancements.
+
+
+![Screenshot 2024-09-06 073958](https://github.com/user-attachments/assets/786b6c80-67d0-4038-8e2c-35caa563e166)
