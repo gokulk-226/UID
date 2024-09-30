@@ -68,3 +68,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Description: To-Do List Application using React Hooks
+Project Title: To-Do List Application
+
+Project Objective:
+The objective of this project is to develop a responsive, feature-rich To-Do List application using React and React Hooks. The app allows users to add, manage, and track their tasks efficiently by marking them as complete, deleting tasks, and logging the date and time each task was created.
+
+Key Features:
+
+Task Addition: Users can add new tasks to the list. Each task includes a title, completion status, and a timestamp indicating when it was added.
+Task Completion: Tasks can be toggled between completed and incomplete. Completed tasks are visually differentiated by striking through the task name.
+Task Deletion: Users can delete tasks they no longer need.
+Timestamp: Each task displays the date and time it was added, allowing users to track when tasks were created.
+User-Friendly Interface: The application features an intuitive interface with input fields for task addition, easy-to-use buttons for task management, and attractive UI/UX using CSS.
+Technologies Used:
+
+React: For building the user interface and handling state with React Hooks (useState).
+CSS: For styling the interface and ensuring a responsive design.
+React Hooks:
+
+useState: Used to manage the state of tasks and input values. This allows dynamic rendering and interaction without page reloads.
+File Structure:
+
+App.js: Contains the main logic of the application, including task addition, toggling completion, and deletion.
+App.css: Defines the visual appearance and styles for the application.
+Project Workflow:
+
+UI Layout: A simple form with an input field and a button to add new tasks.
+State Management: Tasks are stored in a list using useState. The list includes the task description, completion status, and a timestamp.
+Task Manipulation: The user can interact with tasks by marking them as complete or deleting them. The application updates dynamically as tasks are added, deleted, or modified.
+Styling: CSS is used to differentiate between completed and pending tasks, provide hover effects for buttons, and ensure the layout is visually appealing.
+Future Enhancements:
+
+Implement a local storage feature to persist tasks across sessions.
+Add a priority feature to categorize tasks.
+Integrate a due date feature with reminders for upcoming tasks.
+This project serves as a practical demonstration of how to build dynamic user interfaces with React and React Hooks, focusing on state management, user interaction, and responsive design.
+![Screenshot 2024-09-30 161400](https://github.com/user-attachments/assets/cafd480f-0132-4664-a973-c85e0c317729)
