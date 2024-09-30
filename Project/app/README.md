@@ -68,13 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Project Description: MovieHouse
-#Overview: MovieHouse is an interactive web application that allows users to discover and explore a vast collection of movies. Utilizing the TMDB (The Movie Database) API, the application provides features for searching, filtering, and sorting movies based on various criteria such as popularity, ratings, and genres. The user-friendly interface and appealing design create an engaging experience for movie enthusiasts.
+#Project Description: MovieHouse
+Overview: MovieHouse is an interactive web application that allows users to discover and explore a vast collection of movies. Utilizing the TMDB (The Movie Database) API, the application provides features for searching, filtering, and sorting movies based on various criteria such as popularity, ratings, and genres. The user-friendly interface and appealing design create an engaging experience for movie enthusiasts.
 Key Features:
 1.	Search Functionality:
 o	Users can search for movies by title, utilizing a real-time search bar that updates results as the user types.
-2.	Dynamic Movie Listings:
+2.	Dynamic Movie Listings
 o	The application fetches and displays a comprehensive list of movies, showcasing their titles, ratings, and poster images.
 3.	Genre Filtering:
 o	Users can filter movies by genre, allowing for personalized movie discovery based on preferences.
