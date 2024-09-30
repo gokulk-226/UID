@@ -99,5 +99,6 @@ Future Enhancements:
 •	Dark mode toggle for better accessibility.
 Conclusion: MovieHouse serves as a comprehensive movie discovery platform, merging technology and design to offer an enjoyable user experience. The project not only showcases skills in React and API integration but also emphasizes the importance of user interface design in modern web applications.
 
+![Screenshot 2024-09-30 172302](https://github.com/user-attachments/assets/2d0fe9e7-c4d9-46b9-a08f-157c8fc88998)
 
 
