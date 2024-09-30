@@ -104,3 +104,4 @@ Implement a local storage feature to persist tasks across sessions.
 Add a priority feature to categorize tasks.
 Integrate a due date feature with reminders for upcoming tasks.
 This project serves as a practical demonstration of how to build dynamic user interfaces with React and React Hooks, focusing on state management, user interaction, and responsive design.
+![Screenshot 2024-09-30 161400](https://github.com/user-attachments/assets/cafd480f-0132-4664-a973-c85e0c317729)
