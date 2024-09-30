@@ -68,7 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-###Project Description: MovieHouse
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Project Description: MovieHouse
 #Overview: MovieHouse is an interactive web application that allows users to discover and explore a vast collection of movies. Utilizing the TMDB (The Movie Database) API, the application provides features for searching, filtering, and sorting movies based on various criteria such as popularity, ratings, and genres. The user-friendly interface and appealing design create an engaging experience for movie enthusiasts.
 Key Features:
 1.	Search Functionality:
@@ -83,7 +84,7 @@ o	The application provides sorting options, enabling users to organize movie lis
 o	Users can click on a movie to expand its details, revealing a brief overview and other relevant information.
 6.	Responsive Design:
 o	The application is built with a responsive design, ensuring optimal performance and usability across various devices, including desktops, tablets, and mobile phones.
-#Technology Stack:
+Technology Stack:
 •	Frontend: React.js for building user interfaces.
 •	Styling: CSS for custom styles, along with Google Fonts for typography.
 •	API: TMDB API for fetching movie data.
@@ -91,12 +92,12 @@ o	The application is built with a responsive design, ensuring optimal performanc
 #Challenges and Solutions:
 •	API Integration: Integrating with the TMDB API posed challenges, particularly in handling asynchronous requests. These were addressed using axios for streamlined API calls and React's state management for dynamic rendering.
 •	User Experience: Ensuring a smooth user experience involved careful consideration of loading times and data management, which was enhanced through efficient state management techniques in React.
-#Future Enhancements:
+Future Enhancements:
 •	User authentication to create personalized watchlists.
 •	Ratings and reviews functionality to allow users to share their opinions.
 •	Advanced filtering options based on release year, runtime, and cast members.
 •	Dark mode toggle for better accessibility.
-#Conclusion: MovieHouse serves as a comprehensive movie discovery platform, merging technology and design to offer an enjoyable user experience. The project not only showcases skills in React and API integration but also emphasizes the importance of user interface design in modern web applications.
+Conclusion: MovieHouse serves as a comprehensive movie discovery platform, merging technology and design to offer an enjoyable user experience. The project not only showcases skills in React and API integration but also emphasizes the importance of user interface design in modern web applications.
 
 
 
