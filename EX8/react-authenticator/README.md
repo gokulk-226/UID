@@ -107,5 +107,6 @@ Conclusion
 The Authentication System is designed to provide a secure and user-friendly experience for managing user accounts. By incorporating robust security measures and an intuitive interface, the system ensures that users can access their accounts safely while protecting sensitive information from unauthorized access. This system is essential for any web application requiring user authentication and forms the backbone of secure user interactions.
 
 
+![Screenshot 2024-10-22 213646](https://github.com/user-attachments/assets/71ca99e6-43b4-4ca2-8abe-7e8ab1f51080)
 
 
