@@ -113,6 +113,4 @@ The application follows a client-server architecture, with a clear separation be
 Conclusion
 The E-Commerce Website Shopping Cart project serves as a fundamental component of an online shopping platform, demonstrating critical concepts in web development, such as CRUD operations, data persistence, and secure payment processing. By focusing on user experience and efficient cart management, this project aims to provide a solid foundation for building a fully functional e-commerce website. Future enhancements could include features like user authentication, order history, and product recommendations.
 
-![Screenshot 2024-10-22 211901](https://github.com/user-attachments/assets/4dea433c-d830-43a5-abc1-92cf336442c7)
 
-![Screenshot 2024-10-22 211927](https://github.com/user-attachments/assets/114aa35d-393b-493c-843b-3903361fb439)
