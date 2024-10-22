@@ -65,20 +65,34 @@ li.completed span {
   color: #777;
 }
 
-.datetime {
-  font-size: 0.75rem;
-  color: #888;
-}
-
-.delete-btn {
-  background-color: #e74c3c;
+/* Style both update and delete buttons */
+button.update-btn, button.delete-btn {
+  background-color: #3498db;
   color: white;
   border: none;
   padding: 4px 8px;
   border-radius: 5px;
   cursor: pointer;
+  width: 80px; /* Set same size for both buttons */
+  margin: 0 5px;
 }
 
-.delete-btn:hover {
+button.update-btn:hover {
+  background-color: #2980b9;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+}
+
+button.delete-btn:hover {
   background-color: #c0392b;
+}
+
+/* Ensure both buttons are aligned and spaced */
+button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
 }

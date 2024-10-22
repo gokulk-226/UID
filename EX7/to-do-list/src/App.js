@@ -4,14 +4,21 @@ import './App.css';
 function App() {
   const [todos, setTodos] = useState([]);
   const [task, setTask] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentTaskIndex, setCurrentTaskIndex] = useState(null);
 
   const handleAddTask = () => {
     if (task.trim()) {
-      const currentDateTime = new Date();
-      const date = currentDateTime.toLocaleDateString(); // Format: MM/DD/YYYY
-      const time = currentDateTime.toLocaleTimeString(); // Format: HH:MM:SS AM/PM
-      setTodos([...todos, { task, completed: false, date, time }]);
-      setTask(''); // Clear input field after adding task
+      if (isEditing) {
+        const updatedTodos = [...todos];
+        updatedTodos[currentTaskIndex].task = task;
+        setTodos(updatedTodos);
+        setIsEditing(false);
+        setCurrentTaskIndex(null);
+      } else {
+        setTodos([...todos, { task, completed: false }]);
+      }
+      setTask(''); // Clear input field after adding/updating task
     }
   };
 
@@ -26,6 +33,12 @@ function App() {
     setTodos(newTodos);
   };
 
+  const handleUpdateTask = (index) => {
+    setTask(todos[index].task);
+    setIsEditing(true);
+    setCurrentTaskIndex(index);
+  };
+
   return (
     <div className="app">
       <h1>To-Do List</h1>
@@ -36,18 +49,22 @@ function App() {
           onChange={(e) => setTask(e.target.value)}
           placeholder="Enter a task"
         />
-        <button onClick={handleAddTask}>Add Task</button>
+        <button onClick={handleAddTask}>
+          {isEditing ? 'Update Task' : 'Add Task'}
+        </button>
       </div>
       <ul>
         {todos.map((todo, index) => (
           <li key={index} className={todo.completed ? 'completed' : ''}>
             <div>
               <span onClick={() => handleToggleComplete(index)}>{todo.task}</span>
-              <div className="datetime">
-                <small>Added on: {todo.date} at {todo.time}</small>
-              </div>
             </div>
-            <button className="delete-btn" onClick={() => handleDeleteTask(index)}>Delete</button>
+            <button className="update-btn" onClick={() => handleUpdateTask(index)}>
+              Update
+            </button>
+            <button className="delete-btn" onClick={() => handleDeleteTask(index)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
