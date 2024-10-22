@@ -108,5 +108,7 @@ The Authentication System is designed to provide a secure and user-friendly expe
 
 
 ![Screenshot 2024-10-22 213646](https://github.com/user-attachments/assets/71ca99e6-43b4-4ca2-8abe-7e8ab1f51080)
+![Screenshot 2024-10-22 213713](https://github.com/user-attachments/assets/8b29f3ff-fcd1-4fd2-9133-d6d1e500678c)
+
 
 
