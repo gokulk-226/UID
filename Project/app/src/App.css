@@ -15,7 +15,6 @@ h1 {
     color: #3d8bde;
     font-weight: 700;
     text-align: center;
-    
 }
 
 .search-bar {
@@ -32,7 +31,7 @@ h1 {
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 380px;
-    font-size: 16px;
+    font-size: 1rem; /* Changed to rem for consistency */
     outline: none;
     background-color: #f1f1f1;
     color: #333;
@@ -43,7 +42,7 @@ h1 {
     background-color: #007bff;
     color: #fff;
     border: none;
-    font-size: 16px;
+    font-size: 1rem; /* Changed to rem for consistency */
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -58,7 +57,7 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    font-size: 15px;
+    font-size: 1rem; /* Changed to rem for consistency */
     color: #f9f9f9;
     margin-top: 30px;
     font-weight: 600;
@@ -71,7 +70,7 @@ h1 {
     padding: 5px 10px;
     border: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem; /* Changed to rem for consistency */
     outline: none;
     color: #333;
     background-color: #f1f1f1;
@@ -85,19 +84,18 @@ h1 {
 }
 
 .movie {
-  background-color: #1e1e1e; /* existing background color */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid white; /* White border added */
-  transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .movie:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .movie img {
     width: 100%;
@@ -145,4 +143,32 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 768px) {
+    .search-input {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .movie-wrapper {
+        padding: 20px 20px; /* Less padding on smaller screens */
+    }
+}
+.more-info {
+  display: inline-block; /* Makes the link behave like a block */
+  padding: 5px 10px; /* Adds padding for a button-like appearance */
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* Text color */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Centers the text */
+  text-decoration: none; /* Removes underline */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Font weight */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.more-info:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }

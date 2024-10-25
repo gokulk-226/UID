@@ -9,7 +9,6 @@ export default function MovieApp() {
     const [searchQuery, setSearchQuery] = useState('');
     const [genres, setGenres] = useState([]);
     const [selectedGenre, setSelectedGenre] = useState('');
-    const [expandedMovieId, setExpandedMovieId] = useState(null);
 
     // Fetch genres on component mount
     useEffect(() => {
@@ -91,8 +90,11 @@ export default function MovieApp() {
         setSelectedGenre(event.target.value);
     };
 
-    const toggleDescription = (movieId) => {
-        setExpandedMovieId(expandedMovieId === movieId ? null : movieId);
+    // Handle Enter key press for search
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleSearchSubmit();
+        }
     };
 
     return (
@@ -104,6 +106,7 @@ export default function MovieApp() {
                     placeholder='Search Movie...'
                     value={searchQuery}
                     onChange={handleSearchChange}
+                    onKeyDown={handleKeyDown} // Add keydown event
                     className='search-input'
                 />
                 <button onClick={handleSearchSubmit} className='search-button'>
@@ -140,14 +143,16 @@ export default function MovieApp() {
                             />
                             <h2>{movie.title}</h2>
                             <p className='rating'>Rating: {movie.vote_average}</p>
-                            {expandedMovieId === movie.id ? (
-                                <p>{movie.overview}</p>
-                            ) : (
-                                <p>{movie.overview.substring(0, 150)}...</p>
-                            )}
-                            <button onClick={() => toggleDescription(movie.id)}>
-                                {expandedMovieId === movie.id ? 'Show Less' : 'Show More'}
-                            </button>
+                            <p>{movie.overview}</p> {/* Display full overview */}
+                            <br />
+                            <a 
+                                href={`https://www.themoviedb.org/movie/${movie.id}`} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="more-info"
+                            >
+                                More Info
+                            </a>
                         </div>
                     ))
                 ) : (
