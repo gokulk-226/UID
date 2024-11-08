@@ -1,3 +1,4 @@
+//Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
@@ -42,7 +43,7 @@ export default function Auth({ setUserId }) {
 
     return (
         <div className="auth-container">
-            <h1 className="project-title">MovieHouse</h1> {/* Project title */}
+            <h1 className="project-title">Movie Search APP</h1> {/* Project title */}
             <h2>{isLogin ? 'Login' : 'Register'}</h2>
             <input
                 type="email"

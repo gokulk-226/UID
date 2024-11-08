@@ -1,3 +1,4 @@
+//MovieApp.js
 import React, { useEffect, useState } from 'react';
 import './MovieApp.css';
 import { AiOutlineSearch } from "react-icons/ai";
@@ -99,7 +100,7 @@ export default function MovieApp() {
 
     return (
         <div className='container'>
-            <h1>MovieHouse</h1>
+            <h1>Movie Search App</h1>
             <div className='search-bar'>
                 <input
                     type='text'
